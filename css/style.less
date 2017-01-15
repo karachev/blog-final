@@ -1,99 +1,175 @@
 body {
 	width: 2000px;
+	font-family: 'PT Sans', sans-serif;
 	margin: 0;
 	padding: 0;
 }
 
 header {
-		.header__logo {
-			float: left;
-			padding: 15px 35px 19px 400px;
-			background: #1a54e7;
+	.header__logo {
+		float: left;
+		padding: 15px 35px 19px 400px;
+		background: #1a54e7;
 
-			span {
-				font-family: "PT Sans", serif;
-				font-size: 24px;
-				line-height: 36px;
-				color: white;
-				font-weight: normal;
-			}
+		span {
+			font-size: 24px;
+			line-height: 36px;
+			color: white;
+			font-weight: normal;
 		}
+	}
 
-		.header__search {
-			float: left;
-			input {
-				width: 60px;
-				height: 70px;
-				background-color: #f6f6f6;
-				border: none;
-				background: #f6f6f6 url(../img/icon-search.png) no-repeat center;
-			}
+	.header__search {
+		float: left;
+		input {
+			width: 60px;
+			height: 70px;
+			background-color: #f6f6f6;
+			border: none;
+			background: #f6f6f6 url(../img/icon-search.png) no-repeat center;
 		}
+	}
 
-		.header__navigation-main {
-			float: left;
-			ul {
-				padding-left: 25px;
-				li {
-					display: inline-block;
-					padding-right: 30px;
-					a {
-						color: #b2b2b2;
-						font-family: "PT Sans", serif;
-						font-size: 18px;
-						font-weight: 400;
-						line-height: 36px;
-						text-decoration: none;
-					}
+	.header__navigation-main {
+		float: left;
+		ul {
+			padding-left: 25px;
+			li {
+				display: inline-block;
+				padding-right: 30px;
+				a {
+					color: #b2b2b2;
+					font-size: 18px;
+					font-weight: 400;
+					line-height: 36px;
+					text-decoration: none;
+				}
 
-					a:hover {
-						color: darken(#b2b2b2, 20%);
-					}
+				a:hover {
+					color: darken(#b2b2b2, 20%);
+				}
 
-					a:active {
-						color: darken(#b2b2b2, 40%);
-					}
+				a:active {
+					color: darken(#b2b2b2, 40%);
 				}
 			}
 		}
+	}
 
-		.header__navigation-theme {
-			float: right;
-			margin-right: 427px;
-			ul {
+	.header__navigation-theme {
+		float: right;
+		margin-right: 427px;
+		ul {
+			margin-bottom: 0;
+			li {
+				display: inline-block;
+				padding-left: 29px;
 				margin-bottom: 0;
-				li {
-					display: inline-block;
-					padding-left: 29px;
-					margin-bottom: 0;
-					a {
-						padding-bottom: 19px;
-						color: #1a54e7;
-						font-family: "PT Sans", serif;
-						font-size: 18px;
-						font-weight: 400;
-						line-height: 36px;
-						text-decoration: none;
-					}
+				a {
+					padding-bottom: 23px;
+					color: #1a54e7;
+					font-size: 18px;
+					font-weight: 400;
+					line-height: 36px;
+					text-decoration: none;
+				}
 
-					a:hover {
-						color: darken(#1a54e7, 20%);
-						border-bottom: 3px solid #1a54e7;
-					}
+				a:hover {
+					color: darken(#1a54e7, 20%);
+					border-bottom: 3px solid #1a54e7;
+				}
 
-					a:active {
-						color: darken(#1a54e7, 40%);
-						border-bottom: 3px solid #1a54e7;
-					}
+				a:active {
+					color: darken(#1a54e7, 40%);
+					border-bottom: 3px solid #1a54e7;
 				}
 			}
 		}
+	}
 
-		.slider {
-			clear: both;
+	.slider {
+		clear: both;
+		width: 2000px;
+		height: 816px;
+		background: url(../img/slide.jpg) no-repeat;
+
+		input[type="radio"] {
+			display: none;
 		}
 
+		.slider-controls {
+			position: relative;
+			label {
+				position: absolute;
+				display: inline-block;
+				width: 58px;
+				height: 58px;
+				background-color: #ffffff;
+				cursor: pointer;
+				top: 380px;
+			}
 
+			label[for *= "btn-prev"] {
+				left: 0px;
+			}
+
+			label[for *= "btn-next"] {
+				right: 0px;
+			}
+		}
+		.slides {
+			.slide {
+				img {
+					border-radius: 50%;
+					margin-top: 217px;
+					margin-left: 933px;
+				}
+				blockquote {
+					font-family: "PT Serif";
+					color: #ffffff;
+					font-size: 48px;
+					font-weight: 400;
+					line-height: 60px;
+					text-align: center;
+					margin-top: 23px;
+					letter-spacing: 2.4px;
+				}
+
+				button {
+					background-color: #1a54e7;
+					color: #ffffff;
+					font-size: 18px;
+					font-weight: 700;
+					line-height: 36px;
+					border: none;
+					margin-top: 188px;
+					margin-left: 401px;
+					padding: 2px 15px;
+				}
+				span {
+					font-size: 14px;
+					font-weight: 400;
+					line-height: 36px;
+					color: #b0b0b0;
+					margin-left: 903px;
+				}
+				a {
+					font-size: 14px;
+					font-weight: 400;
+					line-height: 36px;
+					color: #1a54e7;
+					text-decoration: underline;
+					margin-left: 12px;
+				}
+				a:hover {
+
+				}
+				a:active {
+
+				}
+			}
+		}
+	}
 }
 
 .clearfix:after {
