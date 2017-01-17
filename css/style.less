@@ -13,7 +13,7 @@ body {
 header {
 	.header__logo {
 		float: left;
-		padding: 15px 29px 19px 399px;
+		padding: 15px 29px 20px 399px;
 		background: #1a54e7;
 
 		span {
@@ -26,7 +26,7 @@ header {
 
 	.header__search {
 		float: left;
-		input {
+		input[type="search"] {
 			width: 60px;
 			height: 70px;
 			background-color: #f6f6f6;
@@ -34,6 +34,17 @@ header {
 			background: #f6f6f6 url(../img/icon-search.png) no-repeat center;
 			cursor: pointer;
 		}
+		input[type="search"]:focus{
+			width: 150px;
+			transition-property: width;
+			transition-duration: 0.5s;
+			background: #f6f6f6;
+			color: #b2b2b2;
+			font-size: 18px;
+			font-weight: 400;
+			line-height: 36px;
+		}
+
 	}
 
 	.header__navigation-main {
@@ -50,11 +61,9 @@ header {
 					line-height: 36px;
 					text-decoration: none;
 				}
-
 				a:hover {
 					color: darken(#b2b2b2, 20%);
 				}
-
 				a:active {
 					color: darken(#b2b2b2, 40%);
 				}
@@ -73,7 +82,7 @@ header {
 				padding-left: 30px;
 				margin-bottom: 0;
 				a {
-					padding-bottom: 23px;
+					padding-bottom: 22px;
 					color: #1a54e7;
 					font-size: 18px;
 					font-weight: 400;
@@ -95,10 +104,10 @@ header {
 	}
 
 	.slider {
-		clear: both;
 		width: 2000px;
 		height: 816px;
 		background: url(../img/slide.jpg) no-repeat;
+		clear: both;
 
 		input[type="radio"] {
 			display: none;
@@ -114,6 +123,68 @@ header {
 				height: 58px;
 				background-color: #ffffff;
 				cursor: pointer;
+			}
+
+			label[for *= "btn-prev"]:before,
+			label[for *= "btn-prev"]:after {
+				content: "";
+				border: 1px solid ##030303;
+				width: 0;
+				height: 18px;
+
+				position: absolute;
+				left: 28px; 
+			}
+
+			label[for *= "btn-prev"]:before {				
+				top: 10px;
+
+				-moz-transform: rotate(44deg); /* Для Firefox */
+		    -ms-transform: rotate(44deg); /* Для IE */
+		    -webkit-transform: rotate(44deg); /* Для Safari, Chrome, iOS */
+		    -o-transform: rotate(44deg); /* Для Opera */
+		    transform: rotate(44deg); 
+			}
+
+			label[for *= "btn-prev"]:after {
+				top: 23px;
+				
+				-moz-transform: rotate(-44deg); /* Для Firefox */
+		    -ms-transform: rotate(-44deg); /* Для IE */
+		    -webkit-transform: rotate(-44deg); /* Для Safari, Chrome, iOS */
+		    -o-transform: rotate(-44deg); /* Для Opera */
+		    transform: rotate(-44deg); 
+			}
+
+			label[for *= "btn-next"]:before,
+			label[for *= "btn-next"]:after {
+				content: "";
+				border: 1px solid ##030303;
+				width: 0;
+				height: 16px;
+
+				position: absolute;
+				left: 31px; 
+			}
+
+			label[for *= "btn-next"]:before {				
+				top: 11px;
+
+				-moz-transform: rotate(-41deg); /* Для Firefox */
+		    -ms-transform: rotate(-41deg); /* Для IE */
+		    -webkit-transform: rotate(-41deg); /* Для Safari, Chrome, iOS */
+		    -o-transform: rotate(-41deg); /* Для Opera */
+		    transform: rotate(-41deg); 
+			}
+
+			label[for *= "btn-next"]:after {
+				top: 23px;
+				
+				-moz-transform: rotate(41deg); /* Для Firefox */
+		    -ms-transform: rotate(41deg); /* Для IE */
+		    -webkit-transform: rotate(41deg); /* Для Safari, Chrome, iOS */
+		    -o-transform: rotate(41deg); /* Для Opera */
+		    transform: rotate(41deg); 
 			}
 
 			label[for *= "btn-prev"] {
